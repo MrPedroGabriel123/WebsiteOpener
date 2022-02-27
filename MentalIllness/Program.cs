@@ -22,6 +22,7 @@ internal static class Webopener
             if (string.IsNullOrEmpty(userFirstChoice)) 
             {
                 Console.WriteLine("Invalid website...");
+                Console.ReadLine();
                 continue;
             }
 
@@ -32,7 +33,6 @@ internal static class Webopener
                 psi.UseShellExecute = true;
                 psi.FileName = gamesense;
                 System.Diagnostics.Process.Start(psi);
-                System.Diagnostics.Process.Start($"https://gamesense.pub/forums/");
                 Console.WriteLine($"Opening {userFirstChoice}");
             }
             if (userFirstChoice == "youtube")
@@ -42,8 +42,6 @@ internal static class Webopener
                 psi.UseShellExecute = true;
                 psi.FileName = youtube;
                 System.Diagnostics.Process.Start(psi);
-
-                System.Diagnostics.Process.Start($"https://www.youtube.com/");
                 Console.WriteLine($"Opening {userFirstChoice}");
             }
 
@@ -53,8 +51,7 @@ internal static class Webopener
                 var psi = new System.Diagnostics.ProcessStartInfo();
                 psi.UseShellExecute = true;
                 psi.FileName = google;
-
-                System.Diagnostics.Process.Start($"https://www.google.pt/");
+                System.Diagnostics.Process.Start(psi);
                 Console.WriteLine($"Opening {userFirstChoice}");
             }
                 
@@ -64,7 +61,7 @@ internal static class Webopener
                 var psi = new System.Diagnostics.ProcessStartInfo();
                 psi.UseShellExecute = true;
                 psi.FileName = twitch;
-                System.Diagnostics.Process.Start($"https://www.twitch.tv/");
+                System.Diagnostics.Process.Start(psi);
                 Console.WriteLine($"Opening {userFirstChoice}");
             }
         }
