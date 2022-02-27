@@ -13,6 +13,7 @@ internal static class Webopener
             Console.WriteLine("gamesense");
             Console.WriteLine("youtube");
             Console.WriteLine("twitch");
+            Console.WriteLine("google");
             var userFirstChoice = Console.ReadLine();
             if (string.IsNullOrEmpty(userFirstChoice)) 
             {
@@ -24,15 +25,20 @@ internal static class Webopener
             {
                 System.Diagnostics.Process.Start(@"https://gamesense.pub/forums/");
             }
+            if (userFirstChoice == "youtube")
+            {
+                System.Diagnostics.Process.Start(@"https://www.youtube.com/");
+            }
 
+            if (userFirstChoice == "google")
+            {
+                System.Diagnostics.Process.Start(@"https://www.google.pt/");
+            }
 
-
-
-
-
-
-
-
+            if (userFirstChoice == "twitch")
+            {
+                System.Diagnostics.Process.Start(@"https://www.twitch.tv/");
+            }
         }
     }
 }
