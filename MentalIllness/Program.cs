@@ -23,21 +23,25 @@ internal static class Webopener
 
             if (userFirstChoice == "gamesense")
             {
-                System.Diagnostics.Process.Start(@"https://gamesense.pub/forums/");
+                System.Diagnostics.Process.Start($"https://gamesense.pub/forums/");
+                Console.WriteLine($"Opening {userFirstChoice}");
             }
             if (userFirstChoice == "youtube")
             {
-                System.Diagnostics.Process.Start(@"https://www.youtube.com/");
+                System.Diagnostics.Process.Start($"https://www.youtube.com/");
+                Console.WriteLine($"Opening {userFirstChoice}");
             }
 
             if (userFirstChoice == "google")
             {
-                System.Diagnostics.Process.Start(@"https://www.google.pt/");
+                System.Diagnostics.Process.Start($"https://www.google.pt/");
+                Console.WriteLine($"Opening {userFirstChoice}");
             }
 
             if (userFirstChoice == "twitch")
             {
-                System.Diagnostics.Process.Start(@"https://www.twitch.tv/");
+                System.Diagnostics.Process.Start($"https://www.twitch.tv/");
+                Console.WriteLine($"Opening {userFirstChoice}");
             }
         }
     }
