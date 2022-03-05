@@ -1,6 +1,5 @@
-﻿using System.Diagnostics;
-using System.Security;
-using System.ComponentModel;
+﻿
+
 namespace Websiteopener;
 
 internal static class Webopener
@@ -18,6 +17,7 @@ internal static class Webopener
             Console.WriteLine("youtube");
             Console.WriteLine("twitch");
             Console.WriteLine("google");
+            Console.WriteLine("amazon");
             var userFirstChoice = Console.ReadLine();
             if (string.IsNullOrEmpty(userFirstChoice)) 
             {
@@ -64,6 +64,17 @@ internal static class Webopener
                 System.Diagnostics.Process.Start(psi);
                 Console.WriteLine($"Opening {userFirstChoice}");
             }
+
+            if (userFirstChoice == "amazon")
+            {
+                var amazon = "https://www.amazon.com/";
+                var psi = new System.Diagnostics.ProcessStartInfo();
+                psi.UseShellExecute = true;
+                psi.FileName = amazon;
+                System.Diagnostics.Process.Start(psi);
+                Console.WriteLine($"Opening {userFirstChoice}");
+            }
+
         }
     }
 }
